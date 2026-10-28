@@ -1,10 +1,30 @@
 {
   "name": "awesome-ai-video-prompts",
-  "description": "Awesome AI video prompts: curated text-to-video and image-to-video prompts for Kling 3.0, Veo 3, Wan 2.5, Runway Gen-4.5 and Seedance 2.0, each with model, settings and what the clip looked like. Camera moves, lighting and motion vocab. Plus Sora alternatives after the shutdown. CC BY 4.0. By UniqAI.",
+  "description": "Awesome AI video prompts: curated text-to-video and image-to-video prompts for Kling 3.0, Veo 3, Wan 2.5, Runway Gen-4 and Seedance, each with model, mode, duration, a why-it-works note and a render-report field. Camera moves, lighting and motion vocab. Plus Sora alternatives after the shutdown. CC BY 4.0. By UniqAI.",
   "homepage": "https://uniqai.app/video?utm_source=github&utm_medium=readme&utm_campaign=awesome-ai-video-prompts",
-  "topics": ["awesome", "awesome-list", "ai-video", "video-prompts", "text-to-video", "image-to-video", "kling", "veo3", "wan", "runway", "seedance", "sora-alternative", "prompt-engineering", "uniqai"],
+  "topics": [
+    "awesome",
+    "awesome-list",
+    "ai-video",
+    "video-prompts",
+    "text-to-video",
+    "image-to-video",
+    "kling",
+    "veo3",
+    "wan",
+    "runway",
+    "seedance",
+    "sora-alternative",
+    "prompt-engineering",
+    "uniqai"
+  ],
   "social_preview": "assets/social-preview.png",
   "default_branch": "main",
-  "features": { "issues": true, "discussions": true, "wiki": false, "projects": false },
-  "notes": "Description and topics from the shared meta.json, with one change: the license word is CC BY 4.0 (the org convention for data repos, and what LICENSE says), not CC0. When uniqai.app/prompts is published, switch homepage to it."
+  "features": {
+    "issues": true,
+    "discussions": true,
+    "wiki": false,
+    "projects": false
+  },
+  "notes": "Description and topics from the shared meta.json, with two changes: the license word is CC BY 4.0 (the org convention for data repos, and what LICENSE says), not CC0; and 'what the clip looked like' became 'a render-report field', because most entries in 0.1.0 have no render report yet (see README, Limits and honesty). Model names match references/model-notes.md (Runway Gen-4 family, Seedance 2.x). When uniqai.app/prompts is published, switch homepage to it."
 }
