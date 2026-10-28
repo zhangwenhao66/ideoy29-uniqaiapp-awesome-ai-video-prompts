@@ -125,15 +125,31 @@ class TestHygiene(unittest.TestCase):
                     self.assertIn("UniqAI", line, "%s: %s" % (rel, line))
 
     def test_readme_links_and_footer(self):
-        readme = open(os.path.join(ROOT, "README.md"), encoding="utf-8").read()
-        self.assertEqual(readme.count("Made by <a"), 1, "exactly one Made by UniqAI footer")
-        for url in re.findall(r"https://uniqai\.app[^\s)\"'<>]*", readme):
-            self.assertIn("utm_source=github", url, url)
-            self.assertIn("utm_campaign=" + REPO, url, url)
-        self.assertLessEqual(len(set(re.findall(r"https://uniqai\.app[^\s)\"'<>]*", readme))), 3)
-        # relative links resolve
-        for target in re.findall(r"\]\((?!https?://|#|mailto:)([^)#]+)", readme):
-            self.assertTrue(os.path.exists(os.path.join(ROOT, target)), "broken relative link: " + target)
+        readmes = sorted(n for n in os.listdir(ROOT) if re.match(r"^README(\.[A-Za-z-]+)?\.md$", n))
+        self.assertIn("README.md", readmes)
+        for name in readmes:
+            readme = open(os.path.join(ROOT, name), encoding="utf-8").read()
+            # utm_medium is readme for README.md and readme-<lang> (lower case) for README.<lang>.md
+            medium = "readme" if name == "README.md" else "readme-" + name[7:-3].lower()
+            # one footer line per file: <sub>... <a href="https://uniqai.app/?utm_...">UniqAI</a> ...</sub>; README.md keeps the English wording
+            footers = re.findall(r"^<sub>[^\n]*<a href=\"https://uniqai\.app/\?utm_[^\"]*\">UniqAI</a>[^\n]*</sub>$", readme, re.M)
+            self.assertEqual(len(footers), 1, name + ": exactly one UniqAI footer line")
+            if name == "README.md":
+                self.assertEqual(readme.count("Made by <a"), 1, "README.md keeps the Made by UniqAI footer")
+            for url in re.findall(r"https://uniqai\.app[^\s)\"'<>]*", readme):
+                self.assertIn("utm_source=github", url, name + ": " + url)
+                self.assertIn("utm_campaign=" + REPO, url, name + ": " + url)
+                self.assertIn("utm_medium=" + medium + "&", url, name + ": " + url)
+            self.assertLessEqual(len(set(re.findall(r"https://uniqai\.app[^\s)\"'<>]*", readme))), 3, name)
+            # every README links every other language
+            for other in readmes:
+                if other != name:
+                    self.assertIn("](%s)" % other, readme, "%s does not link %s" % (name, other))
+            # relative links and local assets resolve
+            for target in re.findall(r"\]\((?!https?://|#|mailto:)([^)#]+)", readme):
+                self.assertTrue(os.path.exists(os.path.join(ROOT, target)), name + ": broken relative link: " + target)
+            for target in re.findall(r"(?:src|srcset)=\"((?!https?://)[^\"]+)\"", readme):
+                self.assertTrue(os.path.exists(os.path.join(ROOT, target)), name + ": missing asset: " + target)
 
 
 if __name__ == "__main__":

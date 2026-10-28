@@ -10,16 +10,29 @@ README.md keeps hand-written text outside two marker pairs:
   <!-- generated:list:start -->  ... <!-- generated:list:end -->
 Everything between the markers is replaced by this script, so the list and the numbers in the
 README can never drift from the JSON. Edit data/prompts/*.json, run this, commit both.
+Translations (README.ru.md, README.zh-CN.md, ...) get the same two blocks with the labels from
+scripts/readme_i18n.py; the hand-written text around the markers is never touched.
 """
 import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from _lib import MODE_LABEL, ROOT, load_meta, load_records, model_name, slug_anchor, use_case_name  # noqa: E402
+from readme_i18n import lang_of, strings, use_case_label  # noqa: E402
 from stats import compute, markdown as stats_markdown  # noqa: E402
 
 OUT_DIR = os.path.join(ROOT, "prompts")
 README = os.path.join(ROOT, "README.md")
+
+
+def readme_files():
+    """README.md first, then every README.<lang>.md, as (path, lang)."""
+    out = []
+    for n in sorted(os.listdir(ROOT)):
+        lang = lang_of(n)
+        if lang and os.path.isfile(os.path.join(ROOT, n)):
+            out.append((os.path.join(ROOT, n), lang))
+    return sorted(out, key=lambda x: (x[1] != "en", x[0]))
 
 
 def entry_md(r, meta, level=4):
@@ -97,29 +110,33 @@ def build_pages(records, meta):
     return files
 
 
-def readme_list(records, meta):
-    """The compact awesome-list section embedded in README: per use case, one line per prompt."""
+def readme_list(records, meta, lang="en"):
+    """The compact awesome-list section embedded in README: per use case, one line per prompt.
+    Titles, model keys and link targets stay English in every language; labels come from readme_i18n."""
+    t = strings(lang)
     out = []
-    for uc, name in meta["use_cases"].items():
+    for uc in meta["use_cases"]:
         recs = [r for r in records if r["use_case"] == uc]
         if not recs:
             continue
+        name = use_case_label(meta, lang, uc)
         out.append("### %s" % name)
         out.append("")
         for r in recs:
             dur = (" · %d s" % r["duration_s"]) if "duration_s" in r else ""
-            mark = " · rendered" if r.get("rendered_on") else ""
+            mark = (" · " + t["rendered"]) if r.get("rendered_on") else ""
             out.append("- [%s](prompts/by-use-case/%s.md#%s) · %s · `%s`%s%s" % (
                 r["title"], uc, slug_anchor(r["title"]), ", ".join(r["models"]), r["mode"], dur, mark))
         out.append("")
-        out.append("[All %s prompts with the full text →](prompts/by-use-case/%s.md)" % (name.lower(), uc))
+        out.append("[%s](prompts/by-use-case/%s.md)" % (t["all_link"](name), uc))
         out.append("")
-    out.append("### By model")
+    out.append("### %s" % t["by_model"])
     out.append("")
     for mkey, m in meta["models"].items():
         n = sum(1 for r in records if mkey in r["models"])
         if n:
-            out.append("- [%s](prompts/by-model/%s.md) · %d prompts · %s" % (m["name"], mkey, n, "generates audio" if m.get("audio") else ("image model" if m["kind"] == "image" else "silent clips")))
+            kind = t["audio"] if m.get("audio") else (t["image_model"] if m["kind"] == "image" else t["silent"])
+            out.append("- [%s](prompts/by-model/%s.md) · %s · %s" % (m["name"], mkey, t["count"](n), kind))
     out.append("")
     return "\n".join(out)
 
@@ -134,14 +151,15 @@ def render_all():
     meta = load_meta()
     records = load_records()
     files = build_pages(records, meta)
-    readme = None
-    if os.path.exists(README):
-        with open(README, encoding="utf-8") as f:
+    stats = compute(records, meta)
+    readmes = {}
+    for path, lang in readme_files():
+        with open(path, encoding="utf-8") as f:
             txt = f.read()
-        txt = replace_between(txt, "<!-- generated:stats:start -->", "<!-- generated:stats:end -->", stats_markdown(compute(records, meta), meta))
-        txt = replace_between(txt, "<!-- generated:list:start -->", "<!-- generated:list:end -->", readme_list(records, meta))
-        readme = txt
-    return files, readme
+        txt = replace_between(txt, "<!-- generated:stats:start -->", "<!-- generated:stats:end -->", stats_markdown(stats, meta, lang))
+        txt = replace_between(txt, "<!-- generated:list:start -->", "<!-- generated:list:end -->", readme_list(records, meta, lang))
+        readmes[path] = txt
+    return files, readmes
 
 
 def main(argv):
@@ -149,7 +167,7 @@ def main(argv):
         print(__doc__.strip())
         return 0
     check = "--check" in argv
-    files, readme = render_all()
+    files, readmes = render_all()
     stale = []
     for rel, content in files.items():
         path = os.path.join(OUT_DIR, rel)
@@ -160,12 +178,12 @@ def main(argv):
                 os.makedirs(os.path.dirname(path), exist_ok=True)
                 with open(path, "w", encoding="utf-8") as f:
                     f.write(content)
-    if readme is not None:
-        old = open(README, encoding="utf-8").read()
+    for path, readme in readmes.items():
+        old = open(path, encoding="utf-8").read()
         if old != readme:
-            stale.append("README.md")
+            stale.append(os.path.relpath(path, ROOT))
             if not check:
-                with open(README, "w", encoding="utf-8") as f:
+                with open(path, "w", encoding="utf-8") as f:
                     f.write(readme)
     # remove generated pages whose source vanished
     for sub in ("by-model", "by-use-case"):
@@ -181,9 +199,9 @@ def main(argv):
         if stale:
             print("out of date (run python3 scripts/build.py): " + ", ".join(stale))
             return 1
-        print("ok: generated files are up to date (%d pages + README sections)" % len(files))
+        print("ok: generated files are up to date (%d pages + sections in %d README file(s))" % (len(files), len(readmes)))
         return 0
-    print("wrote %d pages under prompts/ and refreshed README.md (%d file(s) changed)" % (len(files), len(stale)))
+    print("wrote %d pages under prompts/ and refreshed %s (%d file(s) changed)" % (len(files), ", ".join(os.path.basename(p) for p in readmes), len(stale)))
     return 0
 
 

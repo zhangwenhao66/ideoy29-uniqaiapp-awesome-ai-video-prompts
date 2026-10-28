@@ -13,7 +13,8 @@ import sys
 from collections import Counter
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from _lib import MODE_LABEL, load_meta, load_records, model_name, use_case_name  # noqa: E402
+from _lib import MODE_LABEL, load_meta, load_records, model_name  # noqa: E402
+from readme_i18n import strings, use_case_label  # noqa: E402
 
 
 def compute(records, meta):
@@ -41,28 +42,26 @@ def compute(records, meta):
     }
 
 
-def markdown(stats, meta):
+def markdown(stats, meta, lang="en"):
+    """The stats block README.md embeds; lang picks the labels for README.<lang>.md (scripts/readme_i18n.py)."""
+    t = strings(lang)
     lines = []
-    lines.append("| Model | Prompts written for it |")
+    lines.append(t["stats_model"])
     lines.append("|:---|---:|")
     for k, n in stats["by_model"]:
         lines.append("| %s (`%s`) | %d |" % (model_name(meta, k), k, n))
     lines.append("")
-    lines.append("| Use case | Prompts |")
+    lines.append(t["stats_use_case"])
     lines.append("|:---|---:|")
     for k, n in stats["by_use_case"]:
-        lines.append("| %s | %d |" % (use_case_name(meta, k), n))
+        lines.append("| %s | %d |" % (use_case_label(meta, lang, k), n))
     lines.append("")
-    lines.append("| Mode | Prompts |")
+    lines.append(t["stats_mode"])
     lines.append("|:---|---:|")
     for k, n in stats["by_mode"]:
-        lines.append("| %s (`%s`) | %d |" % (MODE_LABEL[k], k, n))
+        lines.append("| %s (`%s`) | %d |" % (t["modes"][k], k, n))
     lines.append("")
-    lines.append(
-        "%d prompts in total: %d video, %d image. %d carry a render report (`rendered_on` is not empty); "
-        "%d follow a vendor prompt guide or the UniqAI library but have no render report yet."
-        % (stats["total"], stats["video"], stats["image"], stats["rendered"], stats["unrendered"])
-    )
+    lines.append(t["summary"](stats))
     return "\n".join(lines) + "\n"
 
 

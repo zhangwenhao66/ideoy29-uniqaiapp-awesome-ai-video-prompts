@@ -17,7 +17,7 @@ Prompts, render reports and corrections are welcome. The list is only useful if 
    python3 scripts/build.py
    python3 tests/run.py
    ```
-   Commit the JSON together with the regenerated `prompts/**/*.md` and `README.md`. If you changed the output of a command in `examples/README.md`, regenerate that file too.
+   Commit the JSON together with the regenerated `prompts/**/*.md`, `README.md` and the translated `README.<lang>.md` files (`build.py` refreshes their generated blocks too, using the labels in `scripts/readme_i18n.py`; the hand-written text around the markers is translated by a person). If you changed the output of a command in `examples/README.md`, regenerate that file too.
 3. Open a PR with the prompt in the description and, if you rendered it, a line on what you saw.
 
 What is not accepted: prompts copied from another list or a vendor gallery (write your own; CC BY 4.0 applies to what you contribute), prompts that depend on readable text or logos, prompts naming real people or brands, and "cinematic, 8k, masterpiece" style tag soups.
@@ -45,3 +45,4 @@ Model guides move. If a `guide` URL is dead or the vendor changed the rule, upda
 - The README follows the shared design-kit template (animated banner, badge row, `<details>` sections) rather than the older banner layout in CONVENTIONS section 5; the install block from section 4.1 is kept.
 - The list is a data repo, so `LICENSE` is dual: CC BY 4.0 for `data/`, `prompts/` and `references/`, MIT for `scripts/` and `tests/`.
 - `prompts/**/*.md` is generated and committed (awesome lists are read on GitHub, not built), with a test that fails when it drifts.
+- Full translations of the README (`README.ru.md`, `README.zh-CN.md`, `README.es.md`, `README.pt-BR.md`, `README.ja.md`, `README.ko.md`) instead of the short `README.ru.md` from CONVENTIONS section 4.2; prompt titles, model names and keys stay English inside the generated list because they link into the English prompt pages.

@@ -18,6 +18,8 @@
 
 </div>
 
+English · [Русский](README.ru.md) · [简体中文](README.zh-CN.md) · [Español](README.es.md) · [Português (BR)](README.pt-BR.md) · [日本語](README.ja.md) · [한국어](README.ko.md)
+
 # Awesome AI Video Prompts: Kling 3.0, Veo 3, Wan, Runway, Seedance
 
 A curated list of AI video prompts (text-to-video and image-to-video) for Kling 3.0, Veo 3, Wan 2.5, Runway Gen-4 and Seedance 2.x, plus a short set of image prompts for Flux, Nano Banana and GPT Image. Every entry carries the prompt in a code block, the model it is written for, mode, duration, aspect, a note on why the structure works, and a `rendered_on` field that stays empty until someone reports a real render. The data is JSON; the Markdown pages and the counts below are generated from it.
