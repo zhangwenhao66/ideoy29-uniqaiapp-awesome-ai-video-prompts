@@ -1,0 +1,31 @@
+| Model | Prompts written for it |
+|:---|---:|
+| Kling 3.0 (`kling-3`) | 32 |
+| Veo 3 (`veo-3`) | 7 |
+| Wan 2.5 (`wan-2.5`) | 12 |
+| Runway Gen-4 family (`runway-gen-4`) | 3 |
+| Seedance 2.x (`seedance-2`) | 6 |
+| Flux (`flux`) | 6 |
+| Nano Banana (Gemini image) (`nano-banana`) | 8 |
+| GPT Image (`gpt-image`) | 8 |
+
+| Use case | Prompts |
+|:---|---:|
+| Camera moves | 9 |
+| Product | 6 |
+| Portrait | 5 |
+| Nature | 5 |
+| Action | 5 |
+| Ads | 4 |
+| Anime | 4 |
+| Image to video | 6 |
+| Stills (image prompts) | 8 |
+
+| Mode | Prompts |
+|:---|---:|
+| text to video (`t2v`) | 38 |
+| image to video (`i2v`) | 6 |
+| text to image (`t2i`) | 6 |
+| image edit (`i2i`) | 2 |
+
+52 prompts in total: 44 video, 8 image. 7 carry a render report (`rendered_on` is not empty); 45 follow a vendor prompt guide or the UniqAI library but have no render report yet.

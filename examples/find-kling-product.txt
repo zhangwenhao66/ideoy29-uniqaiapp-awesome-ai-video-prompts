@@ -1,0 +1,37 @@
+## Headphones on a turntable  (kling-headphones-turntable)
+Kling 3.0 | text to video | 5 s | 16:9 | rendered: no report yet
+
+```text
+A matte black pair of over-ear headphones rotating slowly on a mirrored turntable, light sweeping across the ear cups. Static camera, product centred. 100 mm lens, one soft key light from the top left and a thin rim light behind, dark grey seamless backdrop. Clean, premium mood.
+```
+
+Why it works: The product moves, the camera does not: a turntable rotation is a motion the model handles well, and 'static camera, product centred' replaces a negative prompt (Kling in UniqAI has no negative field).
+
+## Perfume bottle, macro water drop  (kling-perfume-macro-drop)
+Kling 3.0 | text to video | 5 s | 16:9 | rendered: no report yet
+
+```text
+A glass bottle of amber perfume standing on wet black slate, a single water drop running down the glass. Slow push in on the bottle. 90 mm macro lens, soft backlight through the liquid, small specular highlights. Elegant, quiet atmosphere.
+```
+
+Why it works: One drop running down the glass is a single, slow, physically simple motion. Backlight through amber liquid gives the model a strong colour read on a dark surface.
+
+## Sneaker, quarter orbit  (kling-sneaker-quarter-orbit)
+Kling 3.0 | text to video | 5 s | 16:9 | rendered: no report yet
+
+```text
+A white canvas sneaker on a light grey studio sweep, the fabric laces lifting and settling as a soft breeze passes. Slow quarter-turn orbit around the shoe, stable framing. 85 mm lens, bright even softbox light with a faint ground shadow. Fresh catalogue mood.
+```
+
+Why it works: A quarter turn, not a full orbit, keeps the far side of the shoe out of the shot where models invent laces. The breeze on the laces is the secondary motion that makes it a video, not a slideshow.
+
+## Skincare jar, slow rotate on marble  (kling-skincare-jar-rotate)
+Kling 3.0, Wan 2.5 | text to video | 5 s | 16:9 | rendered: no report yet
+
+```text
+A frosted glass skincare jar with a white lid standing on a pale marble slab, rotating slowly on a hidden turntable, a soft highlight sliding across the frosted surface. Static camera, product centred, 45-degree angle from above. 85 mm lens, large soft light from the top right, gentle shadow, blurred eucalyptus leaves far behind. Calm, clean mood.
+```
+
+Why it works: Frosted glass hides the fake reflections that clear glass invites. The '45-degree angle from above' line fixes the framing so the model does not drift to eye level mid-clip.
+
+4 prompt(s)

@@ -1,0 +1,156 @@
+[
+  {
+    "id": "kling-headphones-turntable",
+    "title": "Headphones on a turntable",
+    "use_case": "product",
+    "mode": "t2v",
+    "models": [
+      "kling-3"
+    ],
+    "duration_s": 5,
+    "aspect": "16:9",
+    "prompt": "A matte black pair of over-ear headphones rotating slowly on a mirrored turntable, light sweeping across the ear cups. Static camera, product centred. 100 mm lens, one soft key light from the top left and a thin rim light behind, dark grey seamless backdrop. Clean, premium mood.",
+    "why": "The product moves, the camera does not: a turntable rotation is a motion the model handles well, and 'static camera, product centred' replaces a negative prompt (Kling in UniqAI has no negative field).",
+    "tags": [
+      "turntable",
+      "studio",
+      "static-camera"
+    ],
+    "rendered_on": [],
+    "source": {
+      "label": "UniqAI prompt library, Kling 3.0 page",
+      "date": "2026-10-28"
+    },
+    "guide": {
+      "label": "Kuaishou, Kling AI text-to-video prompt guide",
+      "url": "https://kling.ai/quickstart/text-to-video-prompt-guide",
+      "date": "2025-11-24"
+    },
+    "added": "2026-10-28"
+  },
+  {
+    "id": "kling-perfume-macro-drop",
+    "title": "Perfume bottle, macro water drop",
+    "use_case": "product",
+    "mode": "t2v",
+    "models": [
+      "kling-3"
+    ],
+    "duration_s": 5,
+    "aspect": "16:9",
+    "prompt": "A glass bottle of amber perfume standing on wet black slate, a single water drop running down the glass. Slow push in on the bottle. 90 mm macro lens, soft backlight through the liquid, small specular highlights. Elegant, quiet atmosphere.",
+    "why": "One drop running down the glass is a single, slow, physically simple motion. Backlight through amber liquid gives the model a strong colour read on a dark surface.",
+    "tags": [
+      "macro",
+      "push-in",
+      "glass"
+    ],
+    "rendered_on": [],
+    "source": {
+      "label": "UniqAI prompt library, Kling 3.0 page",
+      "date": "2026-10-28"
+    },
+    "guide": {
+      "label": "Kuaishou, Kling AI text-to-video prompt guide",
+      "url": "https://kling.ai/quickstart/text-to-video-prompt-guide",
+      "date": "2025-11-24"
+    },
+    "added": "2026-10-28"
+  },
+  {
+    "id": "kling-sneaker-quarter-orbit",
+    "title": "Sneaker, quarter orbit",
+    "use_case": "product",
+    "mode": "t2v",
+    "models": [
+      "kling-3"
+    ],
+    "duration_s": 5,
+    "aspect": "16:9",
+    "prompt": "A white canvas sneaker on a light grey studio sweep, the fabric laces lifting and settling as a soft breeze passes. Slow quarter-turn orbit around the shoe, stable framing. 85 mm lens, bright even softbox light with a faint ground shadow. Fresh catalogue mood.",
+    "why": "A quarter turn, not a full orbit, keeps the far side of the shoe out of the shot where models invent laces. The breeze on the laces is the secondary motion that makes it a video, not a slideshow.",
+    "tags": [
+      "orbit",
+      "catalogue",
+      "breeze"
+    ],
+    "rendered_on": [],
+    "source": {
+      "label": "UniqAI prompt library, Kling 3.0 page",
+      "date": "2026-10-28"
+    },
+    "guide": {
+      "label": "Kuaishou, Kling AI text-to-video prompt guide",
+      "url": "https://kling.ai/quickstart/text-to-video-prompt-guide",
+      "date": "2025-11-24"
+    },
+    "added": "2026-10-28"
+  },
+  {
+    "id": "veo-coffee-pour-audio",
+    "title": "Coffee pour, slow motion with sound",
+    "use_case": "product",
+    "mode": "t2v",
+    "models": [
+      "veo-3"
+    ],
+    "duration_s": 8,
+    "aspect": "16:9",
+    "prompt": "A ceramic cup on a wooden counter, espresso pouring into it in slow motion, crema forming on the surface. Static camera, close-up, cup centred. 100 mm macro lens, warm window light from the left, dark background. Audio: the pour, a soft clink of the cup, quiet café room tone. No music, no voices.",
+    "why": "Slow pouring liquid is a flattering test for any model and Veo adds synced sound to it. Each audio element is listed explicitly; 'no voices' stops the model from adding chatter to a café scene.",
+    "tags": [
+      "pour",
+      "audio",
+      "slow-motion",
+      "food"
+    ],
+    "rendered_on": [],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "seedance-watch-two-shots",
+    "title": "Watch, two connected shots",
+    "use_case": "product",
+    "mode": "t2v",
+    "models": [
+      "seedance-2"
+    ],
+    "duration_s": 10,
+    "aspect": "16:9",
+    "prompt": "Shot 1: a steel dive watch on wet black stone, water beading on the crystal, slow push in on the dial. Shot 2: cut to a close-up of the second hand ticking, light sweeping across the bezel. 90 mm macro lens, cool blue key light with a thin warm rim, dark background. Clean, premium mood.",
+    "why": "Seedance advertises native multi-shot output, so the prompt labels the shots and keeps each one to a single motion. Both shots share the lens and lighting line so the cut feels like one commercial.",
+    "tags": [
+      "multi-shot",
+      "macro",
+      "luxury"
+    ],
+    "rendered_on": [],
+    "guide": {
+      "label": "ByteDance Seed, Seedance model page (multi-shot narrative, camera movement)",
+      "url": "https://seed.bytedance.com/en/seedance",
+      "date": "2026-10-28"
+    },
+    "added": "2026-10-28"
+  },
+  {
+    "id": "kling-skincare-jar-rotate",
+    "title": "Skincare jar, slow rotate on marble",
+    "use_case": "product",
+    "mode": "t2v",
+    "models": [
+      "kling-3",
+      "wan-2.5"
+    ],
+    "duration_s": 5,
+    "aspect": "16:9",
+    "prompt": "A frosted glass skincare jar with a white lid standing on a pale marble slab, rotating slowly on a hidden turntable, a soft highlight sliding across the frosted surface. Static camera, product centred, 45-degree angle from above. 85 mm lens, large soft light from the top right, gentle shadow, blurred eucalyptus leaves far behind. Calm, clean mood.",
+    "why": "Frosted glass hides the fake reflections that clear glass invites. The '45-degree angle from above' line fixes the framing so the model does not drift to eye level mid-clip.",
+    "tags": [
+      "turntable",
+      "beauty",
+      "static-camera"
+    ],
+    "rendered_on": [],
+    "added": "2026-10-28"
+  }
+]

@@ -1,0 +1,97 @@
+{
+  "total": 52,
+  "video": 44,
+  "image": 8,
+  "rendered": 7,
+  "unrendered": 45,
+  "by_model": [
+    [
+      "kling-3",
+      32
+    ],
+    [
+      "veo-3",
+      7
+    ],
+    [
+      "wan-2.5",
+      12
+    ],
+    [
+      "runway-gen-4",
+      3
+    ],
+    [
+      "seedance-2",
+      6
+    ],
+    [
+      "flux",
+      6
+    ],
+    [
+      "nano-banana",
+      8
+    ],
+    [
+      "gpt-image",
+      8
+    ]
+  ],
+  "by_use_case": [
+    [
+      "camera-moves",
+      9
+    ],
+    [
+      "product",
+      6
+    ],
+    [
+      "portrait",
+      5
+    ],
+    [
+      "nature",
+      5
+    ],
+    [
+      "action",
+      5
+    ],
+    [
+      "ads",
+      4
+    ],
+    [
+      "anime",
+      4
+    ],
+    [
+      "image-to-video",
+      6
+    ],
+    [
+      "stills",
+      8
+    ]
+  ],
+  "by_mode": [
+    [
+      "t2v",
+      38
+    ],
+    [
+      "i2v",
+      6
+    ],
+    [
+      "t2i",
+      6
+    ],
+    [
+      "i2i",
+      2
+    ]
+  ]
+}

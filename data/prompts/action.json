@@ -1,0 +1,123 @@
+[
+  {
+    "id": "kling-cyclist-rain-tracking",
+    "title": "Cyclist in the rain, tracking shot",
+    "use_case": "action",
+    "mode": "t2v",
+    "models": [
+      "kling-3"
+    ],
+    "duration_s": 5,
+    "aspect": "16:9",
+    "prompt": "A cyclist in a yellow rain jacket riding through a city street at night, the tyres throwing up spray. Tracking shot alongside at the same speed, stable camera. 35 mm lens, wet reflections of shop signs, shallow depth of field. Energetic, cinematic mood.",
+    "why": "Tracking 'at the same speed' is the phrase that keeps the subject in frame; without it the model lets the cyclist outrun the camera. Spray and wet reflections give motion cues on every frame.",
+    "tags": [
+      "tracking",
+      "night",
+      "rain"
+    ],
+    "rendered_on": [],
+    "source": {
+      "label": "UniqAI prompt library, Kling 3.0 page",
+      "date": "2026-10-28"
+    },
+    "guide": {
+      "label": "Kuaishou, Kling AI text-to-video prompt guide",
+      "url": "https://kling.ai/quickstart/text-to-video-prompt-guide",
+      "date": "2025-11-24"
+    },
+    "added": "2026-10-28"
+  },
+  {
+    "id": "kling-wok-flame-static",
+    "title": "Wok flame, static camera",
+    "use_case": "action",
+    "mode": "t2v",
+    "models": [
+      "kling-3"
+    ],
+    "duration_s": 5,
+    "aspect": "16:9",
+    "prompt": "A chef tossing vegetables in a wok, a flame flaring once and settling. Static camera, medium shot, slight slow motion. 50 mm lens, warm overhead kitchen light with the fire as the key light, steam and sparks. Intense, lively atmosphere.",
+    "why": "The flame 'flaring once and settling' is a single event the model can time. Using the fire as the key light ties the lighting to the action, so highlights move with the flame.",
+    "tags": [
+      "static-camera",
+      "slow-motion",
+      "fire"
+    ],
+    "rendered_on": [],
+    "source": {
+      "label": "UniqAI prompt library, Kling 3.0 page",
+      "date": "2026-10-28"
+    },
+    "guide": {
+      "label": "Kuaishou, Kling AI text-to-video prompt guide",
+      "url": "https://kling.ai/quickstart/text-to-video-prompt-guide",
+      "date": "2025-11-24"
+    },
+    "added": "2026-10-28"
+  },
+  {
+    "id": "runway-skateboarder-low-angle",
+    "title": "Skateboarder, low-angle pass",
+    "use_case": "action",
+    "mode": "t2v",
+    "models": [
+      "runway-gen-4",
+      "seedance-2"
+    ],
+    "duration_s": 5,
+    "aspect": "16:9",
+    "prompt": "Low-angle static camera at ground level on an empty concrete plaza at sunset; a skateboarder rolls past from left to right, close to the lens, wheels loud on the concrete, then exits frame. 20 mm wide lens, long shadows, warm backlight with lens flare. Energetic, simple.",
+    "why": "One subject crossing a static frame is the most reliable action shot across models: no camera move to coordinate with the motion. Entering and exiting the frame gives the clip a natural start and end.",
+    "tags": [
+      "static-camera",
+      "low-angle",
+      "sport"
+    ],
+    "rendered_on": [],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "seedance-chase-two-shots",
+    "title": "Alley chase, two connected shots",
+    "use_case": "action",
+    "mode": "t2v",
+    "models": [
+      "seedance-2"
+    ],
+    "duration_s": 10,
+    "aspect": "16:9",
+    "prompt": "Shot 1: a woman in a yellow jacket runs through a narrow night alley toward the camera, puddles splashing, handheld camera backing away. Shot 2: cut to a high angle from a fire escape as she turns the corner under a neon sign. 35 mm lens, wet surfaces, cyan and magenta signage light, rain in the air.",
+    "why": "Multi-shot prompts work when both shots describe the same subject in the same clothes and light, so the model keeps continuity. The second shot changes the angle, not the scene.",
+    "tags": [
+      "multi-shot",
+      "handheld",
+      "night"
+    ],
+    "rendered_on": [],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "wan-horse-gallop-beach",
+    "title": "Horse galloping on a beach, side tracking",
+    "use_case": "action",
+    "mode": "t2v",
+    "models": [
+      "wan-2.5",
+      "kling-3",
+      "veo-3"
+    ],
+    "duration_s": 5,
+    "aspect": "16:9",
+    "prompt": "A dark brown horse galloping along the water line of a wide beach at golden hour, hooves throwing up sand and spray, mane streaming. Tracking shot from the side at the same speed, stable camera, horse centred. 135 mm lens, low warm sun behind the horse, long shadow on the sand.",
+    "why": "A side-on gallop hides most of the leg-crossing errors that a front-on gallop shows. Same-speed tracking keeps the horse centred so the model is not asked to animate a changing frame.",
+    "tags": [
+      "tracking",
+      "animal",
+      "golden-hour"
+    ],
+    "rendered_on": [],
+    "added": "2026-10-28"
+  }
+]

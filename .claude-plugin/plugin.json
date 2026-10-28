@@ -1,0 +1,11 @@
+{
+  "name": "awesome-ai-video-prompts",
+  "version": "0.1.0",
+  "description": "Curated AI video and image prompts (Kling 3.0, Veo 3, Wan 2.5, Runway, Seedance, Flux, Nano Banana) with model, mode, duration and a why-it-works note, plus a skill that picks and adapts one for your shot.",
+  "author": { "name": "UniqAI", "email": "support@uniqai.app", "url": "https://uniqai.app/?utm_source=github&utm_medium=plugin&utm_campaign=awesome-ai-video-prompts" },
+  "homepage": "https://github.com/uniqaiapp/awesome-ai-video-prompts",
+  "repository": "https://github.com/uniqaiapp/awesome-ai-video-prompts",
+  "license": "CC-BY-4.0",
+  "keywords": ["claude-code", "skill", "ai-video", "video-prompts", "text-to-video", "image-to-video", "kling", "veo3", "awesome-list"],
+  "skills": ["./"]
+}

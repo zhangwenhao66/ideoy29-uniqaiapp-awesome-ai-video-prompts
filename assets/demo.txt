@@ -1,0 +1,24 @@
+$ git clone https://github.com/uniqaiapp/awesome-ai-video-prompts ~/.claude/skills/awesome-ai-video-prompts
+# Python 3.9+, nothing to install
+@wait 500
+$ python3 scripts/find.py --model veo-3 --tag audio --short
+> veo-ugc-handheld-testimonial-style           {b:Veo 3} | text to video | 8 s | 9:16 | rendered: {d:no report yet}
+> veo-dolly-in-lighthouse-audio                {b:Veo 3} | text to video | 8 s | 16:9 | rendered: {d:no report yet}
+> veo-i2v-product-photo-turn-audio             {b:Veo 3} | image to video | 8 s | 16:9 | rendered: {d:no report yet}
+> veo-thunderstorm-plain-audio                 {b:Veo 3} | text to video | 8 s | 16:9 | rendered: {d:no report yet}
+> veo-portrait-one-line-dialogue               {b:Veo 3} | text to video | 8 s | 16:9 | rendered: {d:no report yet}
+> veo-coffee-pour-audio                        {b:Veo 3} | text to video | 8 s | 16:9 | rendered: {d:no report yet}
++ 6 prompt(s)
+@wait 700
+$ python3 scripts/find.py --id kling-push-in-compass
+> {b:## Brass compass, push in}  (kling-push-in-compass)
+> {d:Kling 3.0 | text to video | 5 s | 16:9 | rendered: no report yet}
+
+> {y:A brass compass lying open on a weathered paper map, the needle swinging once and}
+> {y:settling. Slow, stable push in on the compass face. 85 mm macro lens, warm lamp light}
+> {y:from the right, shallow depth of field. Quiet, focused mood, no sudden motion.}
+
+> Why it works: Subject, one small motion (the needle settles), one camera move, then lens
+> and light: the order Kuaishou's guide asks for. The needle gives the model something to
+> animate inside a static scene, so the push in reads as intentional rather than as drift.
++ 1 prompt(s)

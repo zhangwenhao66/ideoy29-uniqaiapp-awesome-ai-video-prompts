@@ -1,0 +1,10 @@
+{
+  "name": "awesome-ai-video-prompts",
+  "description": "Awesome AI video prompts: curated text-to-video and image-to-video prompts for Kling 3.0, Veo 3, Wan 2.5, Runway Gen-4.5 and Seedance 2.0, each with model, settings and what the clip looked like. Camera moves, lighting and motion vocab. Plus Sora alternatives after the shutdown. CC BY 4.0. By UniqAI.",
+  "homepage": "https://uniqai.app/video?utm_source=github&utm_medium=readme&utm_campaign=awesome-ai-video-prompts",
+  "topics": ["awesome", "awesome-list", "ai-video", "video-prompts", "text-to-video", "image-to-video", "kling", "veo3", "wan", "runway", "seedance", "sora-alternative", "prompt-engineering", "uniqai"],
+  "social_preview": "assets/social-preview.png",
+  "default_branch": "main",
+  "features": { "issues": true, "discussions": true, "wiki": false, "projects": false },
+  "notes": "Description and topics from the shared meta.json, with one change: the license word is CC BY 4.0 (the org convention for data repos, and what LICENSE says), not CC0. When uniqai.app/prompts is published, switch homepage to it."
+}

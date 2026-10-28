@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Question or discussion
+    url: https://github.com/uniqaiapp/awesome-ai-video-prompts/discussions
+    about: Ask how to prompt a model, or discuss an entry before opening a PR.
+  - name: Private report
+    url: mailto:support@uniqai.app
+    about: Anything that should not be public (see SECURITY.md).

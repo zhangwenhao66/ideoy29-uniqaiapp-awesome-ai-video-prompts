@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use these prompts, cite the repository."
+title: "Awesome AI Video Prompts"
+type: dataset
+version: 0.1.0
+date-released: 2026-10-28
+license: CC-BY-4.0
+url: "https://github.com/uniqaiapp/awesome-ai-video-prompts"
+repository-code: "https://github.com/uniqaiapp/awesome-ai-video-prompts"
+authors:
+  - name: "UniqAI"
+    email: "support@uniqai.app"
+    website: "https://uniqai.app"
+keywords:
+  - ai-video
+  - prompts
+  - text-to-video
+  - image-to-video
+  - kling
+  - veo

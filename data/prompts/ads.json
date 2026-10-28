@@ -1,0 +1,86 @@
+[
+  {
+    "id": "veo-ugc-handheld-testimonial-style",
+    "title": "UGC-style handheld product talk, with disclosure",
+    "use_case": "ads",
+    "mode": "t2v",
+    "models": [
+      "veo-3"
+    ],
+    "duration_s": 8,
+    "aspect": "9:16",
+    "prompt": "Vertical 9:16, handheld phone look. A man in his twenties in a plain grey T-shirt holds a small blue water bottle up to the camera in a bright kitchen, turning it to show the lid. Natural daylight, slight camera wobble, close framing. He says: \"Okay, this is the one I actually use.\" Audio: his voice, room tone, a tap of the lid. No music, no captions.",
+    "why": "The UGC look is a set of concrete choices: vertical, handheld wobble, daylight, plain clothes, one spoken line. The prompt asks for no captions so you can add real, honest ones in the edit. Label AI presenters as AI in the published ad; this prompt drafts footage, it does not create a real customer.",
+    "tags": [
+      "ugc",
+      "vertical",
+      "dialogue",
+      "audio"
+    ],
+    "rendered_on": [],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "kling-hero-product-reveal-vertical",
+    "title": "Vertical product hero reveal",
+    "use_case": "ads",
+    "mode": "t2v",
+    "models": [
+      "kling-3",
+      "wan-2.5"
+    ],
+    "duration_s": 5,
+    "aspect": "9:16",
+    "prompt": "Vertical 9:16. A matte black wireless earbud case on a dark glass surface, the lid opening slowly to reveal the earbuds with a small light blinking on. Slow push in on the case, stable camera. 90 mm macro lens, one hard rim light from behind, soft fill from the front, dark background with a faint reflection. Premium, quiet mood.",
+    "why": "A lid opening is one mechanical motion with a clear end state, which keeps the hero shot clean. The blinking light gives a small secondary motion that reads as 'on' without text.",
+    "tags": [
+      "vertical",
+      "push-in",
+      "reveal"
+    ],
+    "rendered_on": [],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "seedance-app-promo-three-beats",
+    "title": "App promo, three beats",
+    "use_case": "ads",
+    "mode": "t2v",
+    "models": [
+      "seedance-2"
+    ],
+    "duration_s": 10,
+    "aspect": "9:16",
+    "prompt": "Shot 1: a hand picks up a phone from a café table, screen off, morning light. Shot 2: close-up of the same hand tapping the phone once, the screen lighting up plain white (no interface, no text). Shot 3: the person smiles and looks up at a friend arriving. 50 mm lens, warm daylight, shallow depth of field, consistent clothing and table across shots.",
+    "why": "Three short beats match the hook-demo-payoff rhythm of a short ad. The screen is asked to be plain white so you composite your real UI later instead of getting invented buttons and text.",
+    "tags": [
+      "multi-shot",
+      "app",
+      "composite-ready"
+    ],
+    "rendered_on": [],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "runway-fabric-slow-motion-logo-space",
+    "title": "Fabric in slow motion, space left for a logo",
+    "use_case": "ads",
+    "mode": "t2v",
+    "models": [
+      "runway-gen-4",
+      "kling-3",
+      "wan-2.5"
+    ],
+    "duration_s": 5,
+    "aspect": "16:9",
+    "prompt": "Deep red silk fabric billowing in slow motion against a plain black background, filling the lower two thirds of the frame, the upper third left empty and dark. Static camera. 85 mm lens, one soft light from the left, rich folds and highlights, no other objects.",
+    "why": "Flowing fabric is a motion every current model renders well, and the prompt reserves clean space for a title or logo instead of asking the model to draw text, which it would misspell.",
+    "tags": [
+      "slow-motion",
+      "fabric",
+      "composite-ready"
+    ],
+    "rendered_on": [],
+    "added": "2026-10-28"
+  }
+]

@@ -1,0 +1,28 @@
+{
+  "name": "awesome-ai-video-prompts",
+  "schema_version": 1,
+  "updated": "2026-10-28",
+  "license": "CC-BY-4.0",
+  "attribution": "UniqAI, https://github.com/uniqaiapp/awesome-ai-video-prompts",
+  "models": {
+    "kling-3": { "name": "Kling 3.0", "vendor": "Kuaishou", "kind": "video", "audio": false },
+    "veo-3": { "name": "Veo 3", "vendor": "Google", "kind": "video", "audio": true },
+    "wan-2.5": { "name": "Wan 2.5", "vendor": "Alibaba", "kind": "video", "audio": true },
+    "runway-gen-4": { "name": "Runway Gen-4 family", "vendor": "Runway", "kind": "video", "audio": false },
+    "seedance-2": { "name": "Seedance 2.x", "vendor": "ByteDance", "kind": "video", "audio": false },
+    "flux": { "name": "Flux", "vendor": "Black Forest Labs", "kind": "image", "audio": false },
+    "nano-banana": { "name": "Nano Banana (Gemini image)", "vendor": "Google", "kind": "image", "audio": false },
+    "gpt-image": { "name": "GPT Image", "vendor": "OpenAI", "kind": "image", "audio": false }
+  },
+  "use_cases": {
+    "camera-moves": "Camera moves",
+    "product": "Product",
+    "portrait": "Portrait",
+    "nature": "Nature",
+    "action": "Action",
+    "ads": "Ads",
+    "anime": "Anime",
+    "image-to-video": "Image to video",
+    "stills": "Stills (image prompts)"
+  }
+}

@@ -1,0 +1,10 @@
+## Brass compass, push in  (kling-push-in-compass)
+Kling 3.0 | text to video | 5 s | 16:9 | rendered: no report yet
+
+```text
+A brass compass lying open on a weathered paper map, the needle swinging once and settling. Slow, stable push in on the compass face. 85 mm macro lens, warm lamp light from the right, shallow depth of field. Quiet, focused mood, no sudden motion.
+```
+
+Why it works: Subject, one small motion (the needle settles), one camera move, then lens and light: the order Kuaishou's guide asks for. The needle gives the model something to animate inside a static scene, so the push in reads as intentional rather than as drift.
+
+1 prompt(s)

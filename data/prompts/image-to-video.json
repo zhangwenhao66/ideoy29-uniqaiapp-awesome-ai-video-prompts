@@ -1,0 +1,155 @@
+[
+  {
+    "id": "kling-i2v-portrait-blink-breeze",
+    "title": "Portrait photo: blink and breeze",
+    "use_case": "image-to-video",
+    "mode": "i2v",
+    "models": [
+      "kling-3"
+    ],
+    "duration_s": 5,
+    "aspect": "16:9",
+    "prompt": "The person blinks and smiles slightly, hair moving in a light breeze. Static camera.",
+    "why": "For a photo input the prompt only names the motion; the image already holds the subject, light and framing. Blink, small smile and moving hair are the three motions that keep a face intact.",
+    "tags": [
+      "portrait",
+      "static-camera",
+      "micro-motion"
+    ],
+    "rendered_on": [],
+    "source": {
+      "label": "UniqAI prompt library, Kling 3.0 page",
+      "date": "2026-10-28"
+    },
+    "guide": {
+      "label": "Kuaishou, Kling AI image-to-video guide",
+      "url": "https://kling.ai/quickstart/image-to-video-guide",
+      "date": "2025-11-24"
+    },
+    "added": "2026-10-28"
+  },
+  {
+    "id": "kling-i2v-still-life-steam",
+    "title": "Table or still-life photo: steam and flame",
+    "use_case": "image-to-video",
+    "mode": "i2v",
+    "models": [
+      "kling-3"
+    ],
+    "duration_s": 5,
+    "aspect": "16:9",
+    "prompt": "Steam rises from the cup and the candle flame flickers. Slow push in.",
+    "why": "Steam and a flickering flame are additive motions that do not move the objects themselves, so the composition of the photo survives the clip.",
+    "tags": [
+      "still-life",
+      "push-in",
+      "steam"
+    ],
+    "rendered_on": [],
+    "source": {
+      "label": "UniqAI prompt library, Kling 3.0 page",
+      "date": "2026-10-28"
+    },
+    "guide": {
+      "label": "Kuaishou, Kling AI image-to-video guide",
+      "url": "https://kling.ai/quickstart/image-to-video-guide",
+      "date": "2025-11-24"
+    },
+    "added": "2026-10-28"
+  },
+  {
+    "id": "kling-i2v-landscape-clouds-pan",
+    "title": "Landscape photo: clouds and ripples, pan",
+    "use_case": "image-to-video",
+    "mode": "i2v",
+    "models": [
+      "kling-3"
+    ],
+    "duration_s": 5,
+    "aspect": "16:9",
+    "prompt": "Clouds drift slowly across the sky and the water ripples. Slow pan right.",
+    "why": "Clouds and water are the motions a landscape photo already implies. A slow pan on a wide still gives the model room to out-paint a little without inventing new objects.",
+    "tags": [
+      "landscape",
+      "pan",
+      "water"
+    ],
+    "rendered_on": [],
+    "source": {
+      "label": "UniqAI prompt library, Kling 3.0 page",
+      "date": "2026-10-28"
+    },
+    "guide": {
+      "label": "Kuaishou, Kling AI image-to-video guide",
+      "url": "https://kling.ai/quickstart/image-to-video-guide",
+      "date": "2025-11-24"
+    },
+    "added": "2026-10-28"
+  },
+  {
+    "id": "kling-i2v-animate-illustration",
+    "title": "Illustration: gentle natural motion, keep the style",
+    "use_case": "image-to-video",
+    "mode": "i2v",
+    "models": [
+      "kling-3",
+      "wan-2.5"
+    ],
+    "duration_s": 5,
+    "aspect": "16:9",
+    "prompt": "Animate this illustration: gentle natural motion, hair and clothes move in a light breeze, the character blinks and turns slightly, a slow camera push-in. Keep the art style and the character design exactly as in the image.",
+    "why": "The last sentence is the important one: 'keep the art style and the character design exactly as in the image' is the instruction that stops an illustration from drifting toward photorealism.",
+    "tags": [
+      "illustration",
+      "push-in",
+      "style-lock"
+    ],
+    "rendered_on": [],
+    "source": {
+      "label": "UniqAI, animation tool page preset",
+      "date": "2026-10-28"
+    },
+    "added": "2026-10-28"
+  },
+  {
+    "id": "veo-i2v-product-photo-turn-audio",
+    "title": "Product photo: quarter turn with sound",
+    "use_case": "image-to-video",
+    "mode": "i2v",
+    "models": [
+      "veo-3"
+    ],
+    "duration_s": 8,
+    "aspect": "16:9",
+    "prompt": "The product turns a quarter turn to the left on its base, light sliding across its surface, then stops. Static camera, keep the framing and background exactly as in the photo. Audio: a soft mechanical whir while it turns, then silence. No music.",
+    "why": "Image-to-video on a product photo should ask for one motion with an end ('then stops') so the clip can loop or cut cleanly. The audio line gives Veo a sound that matches the only motion in the frame.",
+    "tags": [
+      "product",
+      "turntable",
+      "audio"
+    ],
+    "rendered_on": [],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "wan-i2v-city-photo-traffic-lights",
+    "title": "City photo: traffic and lights come alive",
+    "use_case": "image-to-video",
+    "mode": "i2v",
+    "models": [
+      "wan-2.5",
+      "kling-3"
+    ],
+    "duration_s": 5,
+    "aspect": "16:9",
+    "prompt": "Cars move slowly through the street, their lights streaking slightly, pedestrians walk, shop signs flicker. Slow push in. Keep the buildings, the camera position and the time of day exactly as in the photo.",
+    "why": "A city still has obvious implied motion (traffic, people, signs), so the prompt lists it and locks everything else. 'Slightly' on the light streaks keeps the exposure from going to long-exposure trails.",
+    "tags": [
+      "city",
+      "push-in",
+      "crowd"
+    ],
+    "rendered_on": [],
+    "added": "2026-10-28"
+  }
+]

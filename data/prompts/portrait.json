@@ -1,0 +1,130 @@
+[
+  {
+    "id": "kling-studio-portrait-blink",
+    "title": "Studio portrait, blink and smile",
+    "use_case": "portrait",
+    "mode": "t2v",
+    "models": [
+      "kling-3"
+    ],
+    "duration_s": 5,
+    "aspect": "16:9",
+    "prompt": "An adult woman with short grey hair in a charcoal turtleneck looking into the lens, a slow blink and a small smile forming. Static camera, head and shoulders. 85 mm lens, one large soft light from camera left, mid-grey backdrop, natural skin texture. Calm editorial mood.",
+    "why": "A blink and a forming smile are the smallest motions a face can make, and the ones models render without warping. The static camera keeps all the attention on them.",
+    "tags": [
+      "static-camera",
+      "studio",
+      "micro-motion"
+    ],
+    "rendered_on": [],
+    "source": {
+      "label": "UniqAI prompt library, Kling 3.0 page",
+      "date": "2026-10-28"
+    },
+    "guide": {
+      "label": "Kuaishou, Kling AI text-to-video prompt guide",
+      "url": "https://kling.ai/quickstart/text-to-video-prompt-guide",
+      "date": "2025-11-24"
+    },
+    "added": "2026-10-28"
+  },
+  {
+    "id": "kling-golden-hour-push-in",
+    "title": "Golden hour, push in to close-up",
+    "use_case": "portrait",
+    "mode": "t2v",
+    "models": [
+      "kling-3"
+    ],
+    "duration_s": 5,
+    "aspect": "16:9",
+    "prompt": "An adult man with a short beard standing in a wheat field at golden hour, wind moving his hair and the stalks around him. Slow push in from a medium shot to a close-up. 135 mm lens, low sun behind him with gentle lens flare, creamy bokeh. Warm, nostalgic atmosphere.",
+    "why": "Wind in hair and wheat does the work; the push in from medium shot to close-up is slow enough that the face stays consistent. Lens flare is named so the model does not treat it as an error.",
+    "tags": [
+      "push-in",
+      "golden-hour",
+      "wind"
+    ],
+    "rendered_on": [],
+    "source": {
+      "label": "UniqAI prompt library, Kling 3.0 page",
+      "date": "2026-10-28"
+    },
+    "guide": {
+      "label": "Kuaishou, Kling AI text-to-video prompt guide",
+      "url": "https://kling.ai/quickstart/text-to-video-prompt-guide",
+      "date": "2025-11-24"
+    },
+    "added": "2026-10-28"
+  },
+  {
+    "id": "kling-dancer-track-forward",
+    "title": "Dancer, track forward",
+    "use_case": "portrait",
+    "mode": "t2v",
+    "models": [
+      "kling-3"
+    ],
+    "duration_s": 5,
+    "aspect": "16:9",
+    "prompt": "A dancer in a loose white shirt turning once, slowly, in an empty rehearsal studio, the fabric following the turn. Slow track forward toward the dancer, stable camera. 35 mm lens, daylight from tall windows, dust in the air. Light, graceful mood.",
+    "why": "One slow turn in a loose shirt: the fabric follows and sells the motion. Fast dance is where limbs break; a single turn is where they do not.",
+    "tags": [
+      "track",
+      "dance",
+      "fabric"
+    ],
+    "rendered_on": [],
+    "source": {
+      "label": "UniqAI prompt library, Kling 3.0 page",
+      "date": "2026-10-28"
+    },
+    "guide": {
+      "label": "Kuaishou, Kling AI text-to-video prompt guide",
+      "url": "https://kling.ai/quickstart/text-to-video-prompt-guide",
+      "date": "2025-11-24"
+    },
+    "added": "2026-10-28"
+  },
+  {
+    "id": "veo-portrait-one-line-dialogue",
+    "title": "Portrait with one line of dialogue",
+    "use_case": "portrait",
+    "mode": "t2v",
+    "models": [
+      "veo-3"
+    ],
+    "duration_s": 8,
+    "aspect": "16:9",
+    "prompt": "A woman in her fifties with silver hair, wearing a dark green cardigan, sitting at a kitchen table with a mug, looking just past the lens. Static camera, medium close-up. 50 mm lens, soft morning window light, warm wood tones. She says: \"I never thought it would take this long.\" Audio: her voice, quiet kitchen room tone, a clock ticking. No music.",
+    "why": "Veo's guide uses 'says:' phrasing for dialogue, so the line is short and in one sentence. Looking 'just past the lens' avoids the uncanny direct-to-camera stare while keeping the face front-on.",
+    "tags": [
+      "dialogue",
+      "audio",
+      "static-camera"
+    ],
+    "rendered_on": [],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "wan-portrait-rain-window",
+    "title": "Rain on a window, portrait behind it",
+    "use_case": "portrait",
+    "mode": "t2v",
+    "models": [
+      "wan-2.5",
+      "kling-3"
+    ],
+    "duration_s": 5,
+    "aspect": "16:9",
+    "prompt": "A man in his thirties with short dark hair seen through a rain-streaked café window, looking down at a notebook, raindrops running down the glass in the foreground. Static camera, medium shot, focus on the face with the drops softly out of focus. 85 mm lens, grey overcast daylight, warm lamp inside. Thoughtful, quiet mood.",
+    "why": "The foreground rain supplies constant motion while the subject stays nearly still, which is the easiest kind of portrait clip to get right. Focus is stated explicitly so the drops do not steal the shot.",
+    "tags": [
+      "rain",
+      "static-camera",
+      "foreground"
+    ],
+    "rendered_on": [],
+    "added": "2026-10-28"
+  }
+]

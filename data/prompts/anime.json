@@ -1,0 +1,85 @@
+[
+  {
+    "id": "wan-anime-rooftop-wind",
+    "title": "Anime rooftop, wind and hair",
+    "use_case": "anime",
+    "mode": "t2v",
+    "models": [
+      "wan-2.5",
+      "kling-3"
+    ],
+    "duration_s": 5,
+    "aspect": "16:9",
+    "prompt": "2D anime style, clean line art and flat cel shading. A teenage girl in a school uniform stands on a rooftop at sunset, hair and ribbon moving in the wind, clouds drifting slowly behind her. Static camera, medium shot. Warm orange sky, soft gradient, light bloom on the horizon. Calm, nostalgic mood.",
+    "why": "Cel-shaded anime needs the style named first so the model commits to flat shading before it draws anything. Hair, ribbon and clouds are the classic anime 'cheap motions' that keep a still composition alive.",
+    "tags": [
+      "cel-shading",
+      "wind",
+      "static-camera"
+    ],
+    "rendered_on": [],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "kling-anime-rain-umbrella-pan",
+    "title": "Anime rain street, slow pan",
+    "use_case": "anime",
+    "mode": "t2v",
+    "models": [
+      "kling-3",
+      "wan-2.5"
+    ],
+    "duration_s": 5,
+    "aspect": "16:9",
+    "prompt": "Anime background-art style, painterly skies and detailed buildings. A narrow Tokyo side street in heavy rain at night, a figure with a transparent umbrella walking away from the camera, neon reflections in the puddles. Slow pan right following the figure, stable. Cool blue and pink light, rain streaks visible against the signs.",
+    "why": "Walking away from the camera avoids the face, which is where anime generations most often break. Rain streaks and reflections give continuous motion across the whole frame.",
+    "tags": [
+      "pan",
+      "rain",
+      "night"
+    ],
+    "rendered_on": [],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "seedance-anime-two-shot-dialogue-less",
+    "title": "Anime two-shot, reaction without dialogue",
+    "use_case": "anime",
+    "mode": "t2v",
+    "models": [
+      "seedance-2"
+    ],
+    "duration_s": 10,
+    "aspect": "16:9",
+    "prompt": "Anime style with soft cel shading. Shot 1: a boy with messy black hair at a train window, close-up, watching the countryside pass. Shot 2: reverse angle, the girl across from him looks up from her book and smiles slightly. Afternoon train light, dust in the air, no speech, no text, consistent character design across shots.",
+    "why": "A shot and a reverse shot is the simplest two-shot grammar and asks nothing of lip sync. 'Consistent character design' is said out loud because multi-shot anime drifts in face shape otherwise.",
+    "tags": [
+      "multi-shot",
+      "cel-shading",
+      "train"
+    ],
+    "rendered_on": [],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "kling-anime-mecha-hangar-tilt",
+    "title": "Mecha hangar, tilt up",
+    "use_case": "anime",
+    "mode": "t2v",
+    "models": [
+      "kling-3",
+      "wan-2.5"
+    ],
+    "duration_s": 5,
+    "aspect": "16:9",
+    "prompt": "Anime mecha style, detailed mechanical linework. A huge grey robot standing in a dim hangar, steam venting from its shoulder joints, warning lights blinking on the gantry. Slow tilt up from its feet to its head, stable camera. Cool blue work lights, orange glow from the eyes, haze in the air. Heavy, tense mood.",
+    "why": "A tilt up a tall static object is the same move as the hiker-on-a-ridge entry, applied to a different genre. Venting steam and blinking lights supply motion while the robot stays rigid and consistent.",
+    "tags": [
+      "tilt",
+      "mecha",
+      "reveal"
+    ],
+    "rendered_on": [],
+    "added": "2026-10-28"
+  }
+]
